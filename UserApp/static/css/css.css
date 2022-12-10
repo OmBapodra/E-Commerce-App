@@ -1,0 +1,111 @@
+
+/* all page */
+
+body{
+    background-color: rgb(206, 238, 252);
+}
+.success{
+    padding:10px 30px 10px 30px;
+    border: 1px solid rgb(37, 140, 37);
+    border-radius: 10px;
+}
+.success:hover{
+    padding:10px 30px 10px 30px;
+    background-color: rgb(37, 140, 37);
+    border: 1px solid rgb(37, 140, 37);
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+/* Mian menu calss */
+
+.menu{
+    padding-top: 50px;
+    text-align: right;
+    height: 100px;
+    background-color:rgb(218, 240, 249);
+}
+
+/* menu lopgo */
+
+
+.menulogo{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+/* menu item  */
+
+.menulist{
+    list-style: none;
+    display: inline-block;
+    margin: 3px;
+    right: 10px;
+}
+.menuitem{
+    text-decoration: none;
+    color: gray;
+    padding: 5px;
+}
+.menuitem:hover{
+    color: black;
+    background-color:skyblue;
+    border:1px solid skyblue;
+    border-radius: 20%;
+}
+
+.active{
+    color: black;
+    background-color:skyblue;
+    border:1px solid skyblue;
+    border-radius: 20%;
+}
+/* form */
+
+.form-control{
+    margin:10px 0px 0px 10px;
+}
+.form-input{
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+}
+
+/* login */
+
+.loginform{
+    margin-top: 50px;
+    background-color: aliceblue;
+    border:1px solid skyblue ;
+    width: 400px;
+    padding: 100px;
+}
+
+/* Product table css */
+table,th, td{
+    border:1px solid gray;
+    border-collapse: collapse;
+    padding: 15px;
+    text-align: left;
+    font-size: larger;
+}
+
+.tablediv{
+    margin-top: 50px;
+}
+/* home */
+
+.card{
+    border:1px solid gray;
+    border-radius: 3px;
+    background-color: transparent;
+    text-align: center;
+    width: 50%;
+    margin: 3px;
+}
+
+.homediv{
+    width: 100%;
+    height: auto;
+    display: flex;
+}

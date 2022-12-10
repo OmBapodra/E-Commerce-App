@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+    <head>
+        <title>Product</title>
+        <link rel="stylesheet" href="{% static 'css/css.css' %}"/>
+    </head>
+    <body>
+        <div class="menu">
+            <span class="menulogo"><img src="{% static 'images/Logo1.jpg' %}" height="140px" width="200px" alt="Company Logo"></span>
+            <ul class="menulist">
+                <li class="menulist"><a href="{% url 'home' %}" class="menuitem">Home</a></li>
+                <li class="menulist"><a href="{% url 'pro' %}" class="menuitem active">Product</a></li>
+                <li class="menulist"><a href="{% url 'log' %}" class="menuitem">Logout</a></li>
+            </ul>
+        </div>
+        <div class="tablediv">
+            <center>
+                <table>
+                    <thead>
+                        <th>Product Image</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Product Description</th>
+                    </thead>
+                    {% for i in productData %}
+                    <tbody>
+                       
+                        <td><img  src="{{ i.image.url }}" height="100px" width="100px" alt="Product Image"/></td>
+                        <td><blockquote>{{i.name}}</blockquote></td>
+                        <td><p >{{ i.price }}</p></td>
+                        <td><blockquote>{{ i.discription }} </blockquote></td>
+                        
+                    </tbody>
+                    {% endfor %}
+                </table>
+            </center>
+        </div>
+    </body>
+</html>

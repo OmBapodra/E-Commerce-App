@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="{% static 'css/css.css' %}"/>
+    </head>
+    <body>
+        <div class="menu">
+            <span class="menulogo"><img src="{% static 'images/logo1.jpg' %}" height="140px" width="200px" alt="Company Logo"></span>
+        </div>
+        <div class="login">
+            <center>
+                <div class="loginform">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <div class="form-control">
+                            <label>Email ID :- </label>&nbsp;&nbsp;&nbsp;
+                            <input type="email" name="email" id="email" class="form-input" placeholder="Enter Your Email" />
+                        </div>
+                        <div class="form-control">
+                            <label>Password :- </label>&nbsp;
+                            <input type="password" name="password" id="password" class="form-input" placeholder="Enter Your Password" />
+                        </div>
+                        <div class="form-control">
+                            <button class="Success" >Login</button>
+                        </div>
+                        <div class="form-control" style="margin-top:30px;">
+                            <span class="linkforuser">New User  <a href="{% url 'signup' %}">Register</a></span>
+                        </div>
+                    </form>
+                </div>
+            </center>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="{% static 'css/css.css' %}"/>
+    </head>
+    <body>
+        <div class="menu">
+            <span class="menulogo"><img src="{% static 'images/Logo1.jpg' %}" height="140px" width="200px" alt="Company Logo"></span>
+            <ul class="menulist">
+                <li class="menulist"><a href="{% url 'home' %}" class="menuitem active">Home</a></li>
+                <li class="menulist"><a href="{% url 'pro' %}" class="menuitem">Product</a></li>
+                <li class="menulist"><a href="{% url 'log' %}" class="menuitem">Logout</a></li>
+            </ul>
+        </div>
+        <div class="homediv">
+           {% for i in 'catagoryData' %}
+            <div class="card">
+               <!-- <img  src="{{ i.catimage.url }}" height="100px" width="100px" alt="Product Image"/>-->
+               <blockquote>{{ i.name }} </blockquote>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </body>
+</html>

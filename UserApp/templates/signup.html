@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="{% static 'css/css.css' %}"/>
+    </head>
+    <body>
+        <div class="menu">
+            <span class="menulogo"><img src="{% static 'images/logo1.jpg' %}" height="140px" width="200px" alt="Company Logo"></span>
+        </div>
+        <div class="login">
+            <center>
+                <div class="loginform">
+                    <form action="" method="POST">
+                       {% csrf_token %} 
+                        <div class="form-control">
+                            <label>Name :- </label>  
+                            <input type="text" name="name" id="name" class="form-input" placeholder="Enter Your Name" />
+                        </div>
+                        <div class="form-control">
+                            <label>Email :- </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="email" name="email" id="email" class="form-input" placeholder="Enter Your Email" />
+                        </div>
+                        <div class="form-control">
+                            <label>Number :- </label>&nbsp;&nbsp;&nbsp;
+                            <input type="number" name="number" id="number" class="form-input" placeholder="Enter Your Contact Number" />
+                        </div>
+                        
+                        <div class="form-control">
+                            <label>Password :- </label>&nbsp;
+                            <input type="password" name="password" id="password" class="form-input" placeholder="Enter Your Password" />
+                        </div>
+                        <div class="form-control">
+                            <button class="Success" >Submit</button>
+                        </div>
+                        <div class="form-control" style="margin-top:30px;">
+                            <span class="linkforuser">Alredy Have An Account  <a href="{% url 'login' %}">Login</a></span>
+                        </div>
+                    </form>
+                </div>
+            </center>
+
+        </div>
+    </body>
+</html>
